@@ -41,7 +41,8 @@ function M.setup(opts)
     local styles = M.styles
 
     Color.new('base03', '#002b36')
-    Color.new('base02', '#073642')
+    Color.new('base04', '#155869')
+    Color.new('base02', '#024454')
     Color.new('base01', '#586e75')
     Color.new('base00', '#657b83')
     Color.new('base0', '#fff0ff')
@@ -111,7 +112,7 @@ function M.setup(opts)
     Group.new('Ignore', colors.none, colors.none, styles.NONE)
 
     Group.new('SpecialKey', colors.base00, colors.base02, styles.bold)
-    Group.new('NonText', colors.base00, colors.NONE, styles.bold)
+    Group.new('NonText', colors.base03, colors.NONE, styles.bold)
     Group.new('StatusLine', colors.base1, colors.base02, styles.reverse)
     Group.new('StatusLineNC', colors.base00, colors.base02, styles.reverse)
     Group.new('Visual', colors.base01, colors.base03, styles.reverse)
@@ -160,6 +161,7 @@ function M.setup(opts)
 
     Group.new('LineNr', colors.base01, colors.none, styles.NONE)
     Group.new('CursorLine', colors.none, colors.base02, styles.NONE, colors.base1)
+    Group.new('Iluminate', colors.none, colors.base04, styles.bold)
     Group.new('CursorLineNr', colors.none, colors.none, styles.NONE, colors.base1)
     Group.new('ColorColumn', colors.none, colors.base02, styles.NONE)
     Group.new('Cursor', colors.base03, colors.base0, styles.NONE)
@@ -328,7 +330,7 @@ function M.setup(opts)
     end
 
     for _, name in pairs({ "LspReferenceText", "LspReferenceRead", "LspReferenceWrite" }) do
-        Group.link(M.translate(name), groups.CursorLine)
+        Group.link(M.translate(name), groups.Iluminate)
     end
 
     return M
