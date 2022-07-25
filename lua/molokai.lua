@@ -161,7 +161,7 @@ function M.setup(opts)
 
     Group.new('LineNr', colors.base01, colors.none, styles.NONE)
     Group.new('CursorLine', colors.none, colors.base02, styles.NONE, colors.base1)
-    Group.new('Iluminate', colors.none, colors.base04, styles.bold)
+    Group.new('Iluminate', colors.none, colors.base04, styles.italic)
     Group.new('CursorLineNr', colors.none, colors.none, styles.NONE, colors.base1)
     Group.new('ColorColumn', colors.none, colors.base02, styles.NONE)
     Group.new('Cursor', colors.base03, colors.base0, styles.NONE)
